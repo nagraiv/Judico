@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@700;900&family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/*font-family: 'Martel', serif;*/
+/*font-family: 'Montserrat', sans-serif;*/
+
+:root {
+    /*--container-width: 1120px;*/
+    /*--container-padding: 35px;*/
+    --accent-color: #784F33;
+    --title-color: #252B42;
+    --ligth-text: #ffffff;
+    --second-text: #737373;
+    --orange: #FF7C4E;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    color: var(--second-text);
+}
+
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: 1120px;
+    padding: 0 35px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    padding-top: 32px;
+    min-height: 770px;
+    background-image: url("../img/header-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    margin-right: 150px;
+    font-family: 'Martel', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--title-color);
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 26px;
+    align-items: center;
+}
+
+.nav__item a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--second-text);
+}
+
+.nav__item a:hover {
+    text-decoration: underline;
+}
+
+.header__content {
+    margin-top: 158px;
+    margin-bottom: 168px;
+}
+
+.header__title {
+    max-width: 500px;
+    margin-bottom: 35px;
+    font-family: 'Martel', serif;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 65px;
+    letter-spacing: 0.1px;
+    color: var(--title-color);
+}
+
+.header__text {
+    max-width: 380px;
+    margin-bottom: 46px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    color: var(--second-text);
+}
+
+.btn {
+    padding: 14px 37px;
+    border-radius: 37px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.btn--action {
+    margin-right: 5px;
+    background-color: var(--accent-color);
+    color: var(--ligth-text);
+}
+
+.btn--header {
+    background-color: #F3F7F6;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
