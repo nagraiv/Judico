@@ -15,9 +15,11 @@
 }
 
 body {
+    background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
     color: var(--second-text);
 }
 
@@ -89,7 +91,7 @@ body {
 
 .header__text {
     max-width: 380px;
-    margin-bottom: 46px;
+    margin-bottom: 34px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -98,8 +100,27 @@ body {
     color: var(--second-text);
 }
 
+.features {
+    padding: 145px 0 150px;
+}
+
+.section__title {
+    margin-bottom: 10px;
+    font-family: 'Martel', serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: var(--title-color);
+}
+
+.section__text {
+
+}
+
 .btn {
-    padding: 14px 37px;
+    display: inline-block;
+    padding: 14px 36px;
     border-radius: 37px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
