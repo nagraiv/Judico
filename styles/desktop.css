@@ -209,6 +209,19 @@ body {
     /*display: none;*/
 }
 
+ /*the veil*/
+.video__preview::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 442px;
+    width: 600px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
+    z-index: 5;
+}
+
+ /*play button*/
 .video__preview::after {
     content: "";
     position: absolute;
@@ -223,16 +236,15 @@ body {
     background-position: center;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    z-index: 6;
 }
 
-.video__preview::before {
-    content: "";
+.video__preview img {
     position: absolute;
     top: 0;
     left: 0;
     height: 442px;
     width: 600px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
 }
 
 .about__content {
