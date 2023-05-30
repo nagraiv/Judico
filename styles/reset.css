@@ -65,10 +65,19 @@ address {
 /* Form */
 
 input, textarea, button, select {
+    display: block;
     font-family: inherit;
     font-size: inherit;
     color: inherit;
     background-color: transparent;
+}
+
+select {
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 input::-ms-clear {
