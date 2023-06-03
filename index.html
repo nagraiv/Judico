@@ -6,6 +6,7 @@
     <title>Judico</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/desktop.css">
+    <link rel="stylesheet" href="styles/adapt.css">
 </head>
 <body>
 
@@ -74,15 +75,18 @@
         <div class="container">
             <div class="section__header centered">
                 <h2 class="section__title">Who We Are</h2>
-                <div class="section__text">Problems trying to resolve the conflict between the two major realms <br>of Classical physics: Newtonian mechanics</div>
+                <div class="section__text">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</div>
             </div>
             <div class="about__row">
                 <div class="container__video">
                     <div class="video__preview">
-                        <img src="img/video-prev.jpg" alt="video preview">
+                        <img class="preview__desktop" src="img/video_prev_desktop.jpg" alt="video preview">
+                        <img class="preview__mobile" src="img/video_prev_mobile.jpg" alt="video preview">
                     </div>
-                    <video src="video/Law_Firm_Promo.mp4" class="video" width="600" height="442"
-                           poster="img/video-prev.jpg">
+                    <video class="video video__desktop" src="video/Law_Firm_Promo.mp4" width="598" height="442">
+                        Sorry, your browser doesn't support embedded videos
+                    </video>
+                    <video class="video video__mobile" src="video/Office_work_mobile.mp4" width="330" height="442">
                         Sorry, your browser doesn't support embedded videos
                     </video>
                 </div>
@@ -242,7 +246,12 @@
         <div class="container">
             <div class="request__card">
                 <h2 class="section__title">Request A Free Consultation</h2>
-                <img src="img/contact-2.png" alt="A woman lawyer">
+                <img srcset="img/contact_desktop.png 364w,
+                             img/contact_mobile.png 414w"
+                     sizes="(max-width: 650px) 414px,
+                            (max-width: 840px) 280px,
+                            364px"
+                        src="img/contact_desktop.png" alt="A woman lawyer">
                 <form action="#!" class="request__form">
                     <div class="form__item">
                         <label for="name">Name*</label>
@@ -265,11 +274,11 @@
                     <div class="form__item">
                         <label for="time">Time *</label>
                         <select class="form__input" id="time" name="time" required>
-                            <option value="t1">10:00 Available</option>
-                            <option value="t2">12:00 Available</option>
-                            <option value="t3">2:00 Available</option>
-                            <option value="t4"selected>4:00 Available</option>
-                            <option value="t5">6:00 Available</option>
+                            <option value="t1">10:00 a.m. Available</option>
+                            <option value="t2">12:00 a.m. Available</option>
+                            <option value="t3">2:00 p.m. Available</option>
+                            <option value="t4"selected>4:00 p.m. Available</option>
+                            <option value="t5">6:00 p.m. Available</option>
                         </select>
                     </div>
                     <div class="form__button">
