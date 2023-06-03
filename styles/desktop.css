@@ -26,6 +26,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: var(--second-text);
+    cursor: default;
 }
 
 .none {
@@ -49,7 +50,7 @@ body {
     padding-top: 42px;
     padding-bottom: 50px;
     min-height: 770px;
-    background-image: url("../img/header-desktop.png");
+    background-image: url("../img/header_desktop.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -235,8 +236,17 @@ body {
     background-color: var(--bg-color);
 }
 
+/*.centered {*/
+/*    margin: 0 auto;*/
+/*    text-align: center;*/
+/*}*/
+
 .centered {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
     text-align: center;
 }
 
@@ -247,6 +257,7 @@ body {
 }
 
 .container__video {
+    margin-top: 20px;
     max-height: 442px;
     max-width: 600px;
     position: relative;
@@ -258,8 +269,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 442px;
-    width: 600px;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
     z-index: 5;
 }
@@ -290,12 +301,22 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 442px;
-    width: 600px;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.video__mobile {
+    display: none;
+}
+
+.preview__mobile {
+    display: none;
 }
 
 .about__content {
     max-width: 333px;
+    margin-left: 10px;
 }
 
 .about__item {
@@ -448,6 +469,11 @@ body {
 
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform .2s;
+}
+
+.team__card:hover {
+    transform: scale(1.1);
 }
 
 .team__card img {
@@ -480,7 +506,7 @@ body {
     min-height: 807px;
     padding: 70px 0;
     background-color: var(--title-color);
-    background-image: url("../img/contact-1.png");
+    background-image: url("../img/contact_bg.png");
     background-repeat: no-repeat;
     background-position: top 123px right calc((100vw - var(--container-width)) / 2 + var(--container-padding) - 9px);
 }
@@ -503,7 +529,7 @@ body {
 .request__card {
     margin-top: -342px;
     min-height: 637px;
-    max-width: calc(var(--container-width) - 2 * var(--container-padding));
+    max-width: min(calc(100vw - 2 * var(--container-padding)), calc(var(--container-width) - 2 * var(--container-padding)));
     background-color: var(--ligth-text);
     position: absolute;
     bottom: 121px;
