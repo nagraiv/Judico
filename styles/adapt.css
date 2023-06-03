@@ -41,8 +41,16 @@
     }
 
     /* Теперь две карточки в ряд в FEATURES */
+    .features {
+        padding-bottom: 85px;
+    }
+
     .features__item {
         width: calc((100% - 30px) / 2);
+    }
+
+    .section__btn a {
+        margin-bottom: 25px;
     }
 
     /* Сужаем карточки в TESTIMONIALS */
@@ -164,6 +172,63 @@
         padding: 20px max(50px, calc((100% - 414px) / 2)) 40px;
         order: 1;
     }
+}
 
+@media (max-width: 569px) {
+    /* Уменьшаем шрифт в HEADER */
+    .header__title {
+        font-size: 40px;
+        line-height: 1.25;
+    }
 
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav__logo a {
+        margin-right: 0;
+    }
+
+    /* Теперь одна карточка в ряд в FEATURES */
+    .features__list {
+        flex-direction: column;
+        /*justify-content: center;*/
+        align-items: center;
+    }
+
+    .features__item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Сужаем карточки в TESTIMONIALS */
+    .container__slider {
+        margin-left: -300px;
+    }
+
+    .testimonial__list {
+        column-gap: unset;
+    }
+
+    .avatar {
+        right: -70px;
+    }
+
+    .card__content {
+        width: 325px;
+        padding-left: 80px;
+    }
+
+    /* Перестраиваем под мобильный дизайн секцию FOOTER */
+    .footer__content {
+        padding: 85px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .footer__content section:not(:last-of-type) {
+        flex-basis: auto;
+    }
 }

@@ -524,6 +524,7 @@ body {
     min-height: 416px;
     background-color: var(--bg-color);
     position: relative;
+    padding-bottom: 87px;
 }
 
 .request__card {
