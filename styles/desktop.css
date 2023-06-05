@@ -257,7 +257,7 @@ body {
 }
 
 .container__video {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     max-height: 442px;
     max-width: 600px;
     position: relative;
@@ -462,7 +462,7 @@ body {
     gap: 5px;
 
     flex: none;
-    width: 230px;
+    max-width: 230px;
     min-height: 291px;
     padding: 30px 40px;
     background-color: var(--ligth-text);

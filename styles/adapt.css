@@ -138,9 +138,9 @@
 
     /* Перестраиваем секцию CONTACT REQUEST под мобильный дизайн */
     .contact {
-        min-height: 844px;
+        min-height: 860px;
         padding: 95px 0;
-        background-position: center bottom 110px;
+        background-position: center bottom 130px;
     }
 
     .contact .container {
@@ -150,7 +150,8 @@
     .request__card {
         position: static;
         margin-top: 0;
-        min-height: 996px;
+        /*min-height: 996px;*/
+        min-height: 933px;
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -219,6 +220,28 @@
         padding-left: 80px;
     }
 
+    /* Карточки надо сделать шире, они теперь в один ряд в TEAM */
+    .team {
+        padding-top: 45px;
+        padding-bottom: 43px;
+    }
+
+    .team .section__text {
+        max-width: 240px;
+    }
+
+    .team__list {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .team__card {
+        max-width: 335px;
+        padding: 30px 95px;
+    }
+
     /* Перестраиваем под мобильный дизайн секцию FOOTER */
     .footer__content {
         padding: 85px 100px;
@@ -230,5 +253,36 @@
 
     .footer__content section:not(:last-of-type) {
         flex-basis: auto;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Убираем лишние отступы и уменьшаем фоновую картинку в CONTACT */
+    .contact {
+        background-size: 313px auto;
+    }
+
+    .contact .section__text {
+        margin-top: 15px;
+        max-width: 280px;
+    }
+
+    .contact .container {
+        padding: 0 48px;
+    }
+
+    .request .container {
+        padding: 0;
+    }
+
+    .request__card {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Уменьшаем отступы в FOOTER */
+    .footer__content {
+        padding: 80px 86px 57px;
     }
 }
