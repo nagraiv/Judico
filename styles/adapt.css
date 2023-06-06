@@ -24,7 +24,7 @@
 
     /* Сужаем карточки в TESTIMONIALS */
     .card__content {
-        width: 420px;
+        max-width: 420px;
         padding: 30px 40px;
     }
 
@@ -55,7 +55,7 @@
 
     /* Сужаем карточки в TESTIMONIALS */
     .card__content {
-        width: 340px;
+        max-width: 340px;
         padding: 30px 40px;
     }
 
@@ -218,7 +218,7 @@
     }
 
     .card__content {
-        width: 325px;
+        max-width: 325px;
         padding-left: 80px;
     }
 
@@ -413,5 +413,27 @@
     /* Уменьшаем отступы в FOOTER */
     .footer__content {
         padding: 80px 86px 57px;
+    }
+}
+
+@media (max-width: 414px) {
+    /* Уменьшаем карточки в TEAM */
+    .team__card {
+        max-width: 230px;
+        padding: 30px 40px;
+    }
+
+    /* Уменьшаем отступы в FOOTER */
+    .footer__content {
+        padding: 80px 50px 57px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    /* Уменьшаем карточки в TESTIMONIALS */
+    .card__content {
+        max-width: 295px;
+        padding-right: 30px;
     }
 }
