@@ -9,6 +9,7 @@
     --container-padding: 35px;
     --bg-color: #FAFAFA;
     --bg-input: #F9F9F9;
+    --bg-nav: #F7F7F7;
     --accent-color: #784F33;
     --primary-color: #D0A144;
     --secondary-color: #295C7A;
@@ -53,6 +54,7 @@ body {
     background-image: url("../img/header_desktop.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-nav);
 }
 
 .nav {
@@ -132,6 +134,10 @@ body {
     line-height: 1.5;
     letter-spacing: 0.2px;
     color: var(--second-text);
+}
+
+.mobile--extra {
+    display: none;
 }
 
 /* MAIN */
