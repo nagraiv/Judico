@@ -607,6 +607,12 @@ body {
     background-position: center right 17px;
 }
 
+input:focus-visible,
+select:focus,
+select:focus-visible {
+    outline: var(--accent-color) solid 1px;
+}
+
 .form__button {
     margin-top: 35px;
 }
@@ -711,11 +717,17 @@ body {
                 0 1px 1px rgba(255,255,255,.1);
 }
 
-.btn:active {
+.btn:active:enabled {
     top: 1px;
     box-shadow:
             0 2px 3px rgba(0,0,0,.3) inset,
             0 1px 1px rgba(255,255,255,.1);
+}
+
+.btn:disabled,
+button[disabled] {
+    cursor: not-allowed;
+    /*pointer-events: none;*/
 }
 
 .btn--accent {
@@ -766,6 +778,12 @@ body {
     color: var(--ligth-text);
 }
 
-.btn--form:hover {
+.btn--form:hover:enabled {
     background-color: #694128;
+}
+
+.btn--form:disabled,
+.btn--form[disabled] {
+    color: var(--muted-color);
+    opacity: 0.8;
 }

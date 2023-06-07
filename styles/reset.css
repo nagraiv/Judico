@@ -76,6 +76,10 @@ select {
     appearance: none;
 }
 
+select:focus-visible {
+    outline: none;
+}
+
 select::-ms-expand {
     display: none;
 }
@@ -95,6 +99,22 @@ button, input[type="submit"] {
 input:focus, input:active,
 button:focus, button:active {
     outline: none;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+input:focus::-moz-placeholder {
+    color: transparent
+}
+
+input:focus:-moz-placeholder {
+    color: transparent
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent
 }
 
 button::-moz-focus-inner {
