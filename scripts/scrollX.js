@@ -4,6 +4,8 @@
     // текущее перемещение происходит через transform: translateX() для плавности
 
     const container = document.querySelector('.container__slider');
+    // запоминаем ширину контейнера, чтобы ограничить горизонтальный скролл
+    const containerWidth = container.scrollWidth;
 
     let isDragged = false;
 
@@ -20,6 +22,7 @@
     };
 
     container.addEventListener('pointerdown', function (e) {
+        e.preventDefault();
 
         startX = e.clientX;
         styleObj = window.getComputedStyle(container, null);
@@ -41,7 +44,16 @@
             // console.log("Droped!");
             // marginLeft += translateX;
             // console.log("New marginLeft: ", marginLeft);
-            container.style.marginLeft = marginLeft + translateX + "px";
+
+            let newMargin = marginLeft + translateX;
+            if (newMargin > window.innerWidth - 100) {
+                newMargin = window.innerWidth - 100;
+            }
+            if (newMargin < 100 - containerWidth) {
+                newMargin = 100 - containerWidth;
+            }
+            // container.style.marginLeft = marginLeft + translateX + "px";
+            container.style.marginLeft = newMargin + "px";
             container.style.transform = null;
             window.removeEventListener('pointermove', scrollXHandler);
         } else {
