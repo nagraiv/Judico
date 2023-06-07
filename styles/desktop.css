@@ -9,6 +9,7 @@
     --container-padding: 35px;
     --bg-color: #FAFAFA;
     --bg-input: #F9F9F9;
+    --bg-nav: #F7F7F7;
     --accent-color: #784F33;
     --primary-color: #D0A144;
     --secondary-color: #295C7A;
@@ -53,6 +54,7 @@ body {
     background-image: url("../img/header_desktop.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-nav);
 }
 
 .nav {
@@ -72,6 +74,10 @@ body {
 
 .nav__logo a:hover {
     opacity: 0.8;
+}
+
+.nav__button {
+    display: none;
 }
 
 .nav__list {
@@ -132,6 +138,10 @@ body {
     line-height: 1.5;
     letter-spacing: 0.2px;
     color: var(--second-text);
+}
+
+.mobile--extra {
+    display: none;
 }
 
 /* MAIN */
@@ -257,7 +267,7 @@ body {
 }
 
 .container__video {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     max-height: 442px;
     max-width: 600px;
     position: relative;
@@ -399,7 +409,7 @@ body {
 }
 
 .card__content {
-    width: 461px;
+    max-width: 461px;
     flex: none;
 
     display: flex;
@@ -462,7 +472,7 @@ body {
     gap: 5px;
 
     flex: none;
-    width: 230px;
+    max-width: 230px;
     min-height: 291px;
     padding: 30px 40px;
     background-color: var(--ligth-text);
@@ -481,7 +491,6 @@ body {
     height: 128px;
     border-radius: 50%;
 }
-
 
 .team__card h6 {
     margin-bottom: 6px;
@@ -629,6 +638,7 @@ select:focus-visible {
     font-family: 'Martel', serif;
     font-weight: 700;
     font-size: 24px;
+    line-height: 1.33;
     letter-spacing: 0.1px;
     color: var(--title-color);
 }
