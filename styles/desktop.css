@@ -76,6 +76,10 @@ body {
     opacity: 0.8;
 }
 
+.nav__button {
+    display: none;
+}
+
 .nav__list {
     display: flex;
     column-gap: 26px;
@@ -487,7 +491,6 @@ body {
     height: 128px;
     border-radius: 50%;
 }
-
 
 .team__card h6 {
     margin-bottom: 6px;
